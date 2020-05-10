@@ -1,24 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import { Switch, Route } from "react-router-dom";
+
+import Casdastro from './pages/Cadastro';
+import LogIn from './pages/LogIn';
+import DragonsList from './pages/DragonsList';
+import NavBar from './components/NavBar';
+
 import './App.css';
 
-function App() {
+function App({ history }) {
+  const [isUserLogged, setUserLogged] = useState({});
+
+  /*useEffect(() => {
+    const user = JSON.parse(sessionStorage.getItem('user'));
+    const isLogged = user ? user.isLogged : false;
+  
+    if (isLogged) {
+      setUserLogged(isLogged);
+    }
+  }, []); // eslint-disable-line*/
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      <Switch>
+       <div className="main">
+          <Route
+            exact 
+            path="/" 
+            component={LogIn} 
+          />
+          <Route path="/DragonsList" component={DragonsList} />
+          <Route path="/Cadastro" component={Casdastro} />
+        </div>
+       </Switch>
     </div>
   );
 }
