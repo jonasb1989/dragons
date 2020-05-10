@@ -18,5 +18,9 @@
         &:focus {
             outline: none;
         }
+
+        &:disabled {
+            background-color: #f8f9fa;
+        }
     }
 }

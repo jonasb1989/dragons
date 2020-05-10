@@ -5,6 +5,7 @@ import Casdastro from './pages/Cadastro';
 import LogIn from './pages/LogIn';
 import DragonsList from './pages/DragonsList';
 import NavBar from './components/NavBar';
+import Detalhe from './pages/Detalhe';
 
 import './App.css';
 
@@ -32,6 +33,7 @@ function App({ history }) {
           />
           <Route path="/DragonsList" component={DragonsList} />
           <Route path="/Cadastro" component={Casdastro} />
+          <Route path="/Detalhe/:id" component={Detalhe} />
         </div>
        </Switch>
     </div>

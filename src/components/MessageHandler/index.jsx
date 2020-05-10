@@ -7,7 +7,7 @@ const errorClassName  = 'error-message'
 
 const MessageHandler = ({ 
     isVisible = false, 
-    isSuccess = false, 
+    isSuccess = true, 
     isError = false,
     message = '',
 }) => {

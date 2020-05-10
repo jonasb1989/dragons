@@ -16,6 +16,7 @@ const NavBar = ({ history }) => {
                 <Logo />
             </div>
             <div className="nav-bar-options">
+                <Link className="option" to="/DragonsList">DRAGÕES</Link>
                 <Link className="option" to="/Cadastro">CADASTRAR</Link>
                 <Link className="option" to="/" onClick={handleLogOut}>LOG OUT</Link>
             </div>

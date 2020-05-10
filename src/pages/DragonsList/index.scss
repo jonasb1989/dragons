@@ -1,7 +1,12 @@
 .dragoes {
-    width: 50%;
+    width: 75%;
+    border-radius: 4px;
+    padding: 0 25px 25px;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .05);
 
     .dragoes-table {
+        margin-top: 10px;
+
         tr > th {
             text-align: left;
         }
