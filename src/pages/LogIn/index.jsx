@@ -4,7 +4,7 @@ import FormInput from '../../components/FormInput';
 
 import './index.scss';
 
-const LogIn = ({ history }) => {
+const LogIn = ({ history, onLogIn }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -16,17 +16,18 @@ const LogIn = ({ history }) => {
                 email,
                 password, 
             }));
+            onLogIn();
             history.push('/DragonsList');
         };
     };
 
     const handleEmailChange = e => {
         setEmail(e.target.value);
-    }
+    };
 
     const handlePasswordChange = e => {
         setPassword(e.target.value);
-    }
+    };
 
     return (
         <div className="sign-in">

@@ -63,7 +63,7 @@ const DragonsList = ({ history }) => {
             setMessage(EXCLUSAO_FAILURE);
             setTimeout(() => setSubmitFailure(false), 3000);
         }
-    }
+    };
 
     const handleUpdateDragon = async (id, dragonObject) => {
         try {
@@ -77,7 +77,7 @@ const DragonsList = ({ history }) => {
             setSubmitFailure(true);
             setTimeout(() => setSubmitFailure(false), 3000);
         }
-    }
+    };
 
     return (
         <Spinner isLoading={loading}>

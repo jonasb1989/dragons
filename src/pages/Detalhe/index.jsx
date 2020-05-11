@@ -56,10 +56,6 @@ const Detalhe = ({ hitory, location, match }) => {
                             <h3>Data de Criação</h3>
                             <span>{dateToShow(createdAt)}</span>
                         </div>
-                        <div className="detalhe">
-                            <h3>Data de Criação</h3>
-                            <span>{dateToShow(createdAt)}</span>
-                        </div>
                         {!!histories.length && histories.map(history => (
                             <div className="detalhe">
                                 <h3>História</h3>
